@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autorismo - Location de Voitures de Luxe</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;500&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #0a0a0a;
+            color: #fff;
+        }
+        header {
+            background: url('https://source.unsplash.com/1600x800/?luxury-car-showroom') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 250px 20px;
+            font-size: 50px;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.9);
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            padding: 60px 5%;
+            text-align: center;
+        }
+        .brand {
+            margin-bottom: 60px;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 30px;
+        }
+        .cars-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .car {
+            background: #222;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+            padding: 20px;
+            width: 350px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .car:hover {
+            transform: scale(1.08);
+        }
+        .car img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        button {
+            background: linear-gradient(to right, #d4af37, #b89e30);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 18px;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: linear-gradient(to right, #b89e30, #967b22);
+        }
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            font-size: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="overlay"></div>
+        <h1>Autorismo - Location de Luxe</h1>
+    </header>
+    
+    <div class="container">
+        <h2>Nos Voitures en Location</h2>
+        
+        <div class="brand">
+            <h2>BMW</h2>
+            <div class="cars-container">
+                <div class="car"><img src="https://source.unsplash.com/400x250/?bmw-m8" alt="BMW M8"><h3>BMW M8 Competition</h3><p>1 200€/jour</p><button onclick="louerVoiture('BMW M8 Competition')">Louer</button></div>
+                <div class="car"><img src="https://source.unsplash.com/400x250/?bmw-x5" alt="BMW X5"><h3>BMW X5</h3><p>600€/jour</p><button onclick="louerVoiture('BMW X5')">Louer</button></div>
+                <div class="car"><img src="https://source.unsplash.com/400x250/?bmw-i8" alt="BMW i8"><h3>BMW i8</h3><p>1 000€/jour</p><button onclick="louerVoiture('BMW i8')">Louer</button></div>
+            </div>
+        </div>
+        
+        <div class="brand">
+            <h2>Porsche</h2>
+            <div class="cars-container">
+                <div class="car"><img src="https://source.unsplash.com/400x250/?porsche-911" alt="Porsche 911"><h3>Porsche 911</h3><p>1 500€/jour</p><button onclick="louerVoiture('Porsche 911')">Louer</button></div>
+                <div class="car"><img src="https://source.unsplash.com/400x250/?porsche-cayenne" alt="Porsche Cayenne"><h3>Porsche Cayenne</h3><p>700€/jour</p><button onclick="louerVoiture('Porsche Cayenne')">Louer</button></div>
+                <div class="car"><img src="https://source.unsplash.com/400x250/?porsche-panamera" alt="Porsche Panamera"><h3>Porsche Panamera</h3><p>900€/jour</p><button onclick="louerVoiture('Porsche Panamera')">Louer</button></div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Autorismo - Location de Voitures de Luxe - Tous droits réservés.</p>
+    </footer>
+    
+    <script>
+        function louerVoiture(voiture) {
+            alert("Vous avez sélectionné la location de " + voiture + " ! Nous vous contacterons pour finaliser la réservation.");
+        }
+    </script>
+</body>
+</html>
